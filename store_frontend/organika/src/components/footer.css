@@ -1,0 +1,15 @@
+.footer{
+    padding: 20px 10px 10px 10px;
+    background-color: #a9e4ad;
+    border-top: 1px solid #e6e6e6;
+    display: flex;
+}
+.footer div{
+    flex: 1;
+    text-align: center;
+}
+footer.name{
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
