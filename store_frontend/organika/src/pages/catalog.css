@@ -1,3 +1,10 @@
 .catalog h1{
     text-align: center;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+.catalog h4{
+    text-align: center;
+    color: rgb(132, 132, 132);
+    margin-bottom: 30px;
 }

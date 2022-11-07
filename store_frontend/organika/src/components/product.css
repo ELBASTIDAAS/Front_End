@@ -1,7 +1,19 @@
 .product{
     display: inline-block;
     width: 250px;
-    height: 470px;
+    height: 380px;
     margin-right: 10px;
     margin-bottom: 15px;
+    border: 1px solid grey;
+    border-radius: 6px;
+    text-align: center;
+}
+.product img{
+    width: 230px;
+    height: 230px;
+}
+
+.product .prices{
+    display: flex;
+    justify-content: space-around;
 }
