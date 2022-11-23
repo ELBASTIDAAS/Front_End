@@ -1,0 +1,52 @@
+.admin {
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 120px);
+}
+
+.admin .content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.admin .product-form {
+    flex: 3;
+    max-width: 400px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid grey;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.admin .coupons-form {
+    flex: 1;
+    max-width: 200px;
+    padding: 15px;
+}
+
+.admin h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.my-control {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.my-control label {
+    width: 75px;
+    text-align: right;
+    color: cadetblue;
+}
+
+.admin h5 {
+    text-align: center;
+    color: darkseagreen;
+
+
+}
+
+.my-control input {
+    flex: 1;
+}
