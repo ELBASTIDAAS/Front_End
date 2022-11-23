@@ -3,16 +3,18 @@ import { useState } from 'react';
 const Admin = () => {
     const [product, setProducts] = useState({});
     const saveProduct = () => {
-        console.log('save product')
+        console.log(product);
     }
     const saveCoupon = () => {
-        console.log('save coupon')
+        console.log('save coupon');
     }
     const productValChange = (e) => {
-        let name = e.target.name
-        let value = e.target.value
-
-        product[name] = value;
+        let name = e.target.name;
+        let value = e.target.value;
+        //copy, modify the copy, set the copy back
+        let copy = {...product};
+        copy[name] = value;
+        setProducts(copy);
     }
     return (
         <div className="admin">
