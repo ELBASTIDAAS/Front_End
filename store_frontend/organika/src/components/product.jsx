@@ -1,23 +1,17 @@
 import "./product.css";
 import QuantityPicker from './quantityPicker';
 import { useState } from 'react';
+import DataContext from "../state/dataContext";
+import { useContext } from "react";
 
 const Product
     = (props) => {
-        const [quantity, setQuiantity] = useState(1);
+        const addProd = useContext(DataContext).addProductToCart;
 
-        const handleQuantityChange
-            = (qty) => {
-                console.log("Quantity Changed", qty);
-                setQuiantity(qty);
-            };
-
-        const getTotal = () => {
-            return (quantity * props.data.price).toFixed("2");
+        const handleAdd = () => {
+            //call the context function
+            addProd(props.data);
         }
-
-
-
         return (
             <div className="product">
                 <img src={"/images/" + props.data.image} alt="" />
@@ -25,14 +19,14 @@ const Product
                 <h5>{props.data.title}</h5>
 
                 <div className="prices">
-                    <label className="total">{getTotal()}</label>
-                    <label className="price">${props.data.price.toFixed("2")}</label>
+                    <label className="total">${props.data.price}</label>
+                    <label className="price">${props.data.price}</label>
                 </div>
 
 
                 <div className="controls">
-                    <QuantityPicker onChange={handleQuantityChange} />
-                    <button className="btn btn-sm btn-info">Add</button>
+                    <QuantityPicker />
+                    <button onClick={handleAdd} className="btn btn-sm btn-info">Add</button>
                 </div>
             </div>
         );

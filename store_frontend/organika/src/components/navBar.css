@@ -1,13 +1,14 @@
-.nav-bar{
+.nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     height: 60px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    
+    background-color: rgb(107, 107, 107);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
-.nav-bar h1{
+
+.nav-bar h1 {
     color: red;
 }
