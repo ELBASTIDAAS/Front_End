@@ -1,5 +1,5 @@
 .admin {
-    background-color: #DEC683;
+    background-color: #DACEE4;
     min-height: calc(100vh - 120px);
 }
 
@@ -14,20 +14,20 @@
 .admin .products-form {
     flex: 3;
     max-width: 350px;
-    background-color: #DEC683;
+    background-color: #DACEE4;
     border-radius: 6px;
     padding: 10px;
 }
 
 .admin .coupons-form {
     flex: 1;
-    background-color: #DEC683;
+    background-color: #DACEE4;
     max-width: 350px;
     padding: 15px;
 }
 
 .admin h3 {
-    color: rgb(0, 48, 0);
+    color: black;
     text-align: center;
     margin-top: 10px;
 }
@@ -52,12 +52,12 @@
     margin-right: 10px;
     width: 75px;
     text-align: right;
-    color: #6E4D0C;
+    color: black;
 }
 
 .admin h5 {
     text-align: center;
-    color: #6E4D0C;
+    color: black;
 }
 
 .my-control input {
