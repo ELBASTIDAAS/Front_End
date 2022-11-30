@@ -1,14 +1,10 @@
-.nav-bar .raro{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    height: 60px;
-    background-color: rgb(230, 246, 237);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
+.navbar-custom {
+    background-color: #918998;
 }
-
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: black;
+}
 .nav-bar h1 {
     color: red;
 }
