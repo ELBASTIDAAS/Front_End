@@ -1,10 +1,10 @@
-.nav-bar {
+.nav-bar .raro{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     height: 60px;
-    background-color: rgb(107, 107, 107);
+    background-color: rgb(230, 246, 237);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
 }

@@ -57,7 +57,7 @@ const Admin = () => {
                         <label htmlFor="">Price</label>
                         <input name="price" onBlur={productValChange} type="number" />
                     </div>
-                    <div className="my-control">
+                    <div className="center">
                         <button onClick={saveProduct} className="btn btn-dark">Save product</button>
                     </div>
                     <hr />
@@ -80,7 +80,7 @@ const Admin = () => {
                         <label htmlFor="">Discount</label>
                         <input name="discount" type="number" onBlur={couponValChange} />
                     </div>
-                    <div className="my-control center">
+                    <div className="center1">
                         <button onClick={saveCoupon} className="btn btn-dark">Save Coupon</button>
                     </div>
                     <hr />
