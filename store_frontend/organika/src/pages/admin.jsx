@@ -37,7 +37,7 @@ const Admin = () => {
     }
     return (
         <div className="admin">
-            <h3>Store Administration</h3>
+            <h3 className="rarito">Store Administration</h3>
             <div className="content">
                 <div className="products-form">
                     <h5>Save product</h5>

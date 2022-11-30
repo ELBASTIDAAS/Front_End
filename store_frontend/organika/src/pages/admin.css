@@ -3,6 +3,7 @@
     min-height: calc(100vh - 120px);
 }
 
+
 .admin .content {
     margin-top: 60px;
     display: flex;
@@ -41,11 +42,14 @@
     text-align: center;
     margin-top: 20px;
 }
+
 .center1 {
     text-align: center;
     margin-top: 95px;
 }
+
 .my-control label {
+    margin-right: 10px;
     width: 75px;
     text-align: right;
     color: #6E4D0C;
@@ -58,4 +62,5 @@
 
 .my-control input {
     flex: 1;
+    margin-right: 5px;
 }
