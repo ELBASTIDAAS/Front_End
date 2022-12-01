@@ -19,13 +19,13 @@ function NavBar() {
                             <Link class="nav-link active" aria-current="page" to='/home'><i class="bi bi-house-door-fill"></i></Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link" to='/catalog'>Catalog</Link>
+                            <Link class="nav-link" to='/catalog'>CATALOG</Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link" to='/about'>About</Link>
+                            <Link class="nav-link" to='/about'>ABOUT</Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link" to='/admin'>Admin</Link>
+                            <Link class="nav-link" to='/admin'>ADMIN</Link>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -36,6 +36,7 @@ function NavBar() {
                         </Link>
                     </form>
                 </div>
+                
             </div>
         </nav>
     )

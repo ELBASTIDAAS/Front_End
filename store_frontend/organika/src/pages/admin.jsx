@@ -37,31 +37,31 @@ const Admin = () => {
     }
     return (
         <div className="admin">
-            <h3 className="rarito">Store Administration</h3>
+            <h3 className="rarito">STORE ADMINISTRATION</h3>
             <div className="content">
                 <div className="products-form">
                     <h5>Save product</h5>
                     <div className="my-control">
-                        <label htmlFor="">Title</label>
-                        <input name="title" onBlur={productValChange} type="text" />
+                        <label htmlFor=""><i class="bi bi-code"></i> Title</label>
+                        <input name="title" onBlur={productValChange} type="text" placeholder="Introducing the Title"/>
                     </div>
                     <div className="my-control">
-                        <label htmlFor="">Image</label>
-                        <input name="image" onBlur={productValChange} type="text" />
+                        <label htmlFor=""><i class="bi bi-card-image"></i> Image</label>
+                        <input name="image" onBlur={productValChange} type="file" placeholder="Introducing the Image"/>
                     </div>
                     <div className="my-control">
                         <label htmlFor="">Category</label>
-                        <input name="category" onBlur={productValChange} type="text" />
+                        <input name="category" onBlur={productValChange} type="text" placeholder="Introducing the Category"/>
                     </div>
                     <div className="my-control">
-                        <label htmlFor="">Price</label>
-                        <input name="price" onBlur={productValChange} type="number" />
+                        <label htmlFor=""> <i class="bi bi-currency-dollar"></i> Price</label>
+                        <input name="price" onBlur={productValChange} type="number" placeholder="Introducing the Price"/>
                     </div>
                     <div className="center">
                         <button onClick={saveProduct} className="btn btn-dark">Save product</button>
                     </div>
                     <hr />
-                    <h5>Product List</h5>
+                    <h5>- Product List -</h5>
                     <ul>
                         {allProducts.map(p => (
                             <li key={p.title}>
@@ -74,17 +74,17 @@ const Admin = () => {
                     <h5>Register Coupon Codes</h5>
                     <div className="my-control">
                         <label htmlFor="" >Coupon</label>
-                        <input name="code" type="text" onBlur={couponValChange} />
+                        <input name="code" type="text" onBlur={couponValChange} placeholder="Introducing the Coupon"/>
                     </div>
                     <div className="my-control">
-                        <label htmlFor="">Discount</label>
-                        <input name="discount" type="number" onBlur={couponValChange} />
+                        <label htmlFor=""> Discount</label>
+                        <input name="discount" type="number" onBlur={couponValChange} placeholder="Introducing the Discount.." />
                     </div>
                     <div className="center1">
                         <button onClick={saveCoupon} className="btn btn-dark">Save Coupon</button>
                     </div>
                     <hr />
-                    <h5>Valid Coupon Codes</h5>
+                    <h5>- Valid Coupon Codes -</h5>
                     <ul>
                         {allCoupons.map((c) => (
                             <li key={c.code}>

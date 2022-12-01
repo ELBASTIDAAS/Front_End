@@ -1,7 +1,7 @@
 .admin {
 
     background-color: #DACEE4;
-    min-height: calc(101vh - 120px);
+    min-height: calc(102vh - 120px);
 }
 
 
@@ -52,7 +52,7 @@
 }
 
 .my-control label {
-    margin-right: 10px;
+    margin-right: 20px;
     width: 75px;
     text-align: right;
     color: black;

@@ -1,7 +1,7 @@
 .about{
     margin-top: 10px;
     background-color: #DACEE4;
-    min-height: calc(101vh - 120px);
+    min-height: calc(102vh - 120px);
 }
 
 .about h4{
@@ -27,9 +27,7 @@
     text-decoration: underline;
     
 }
-.about .container .border.screen-reader-text:hover{
-    color:#0a0a5d
-}
+
 .about h5{
     text-align: center;
     margin-top: 480px;
