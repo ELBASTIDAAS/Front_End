@@ -4,7 +4,18 @@ const About = () => {
     return (
         <div className="about">
             <h4>Miguel Bastidas</h4>
-            <h5>Email: miguel.bastidas18@tectijuana.edu.mx</h5>
+            <div className="container">
+                <div className="border">
+                    <h1>I'M</h1>
+                </div>
+                <div className="border">
+                    <h1>JOBS</h1>
+                </div>
+                <div className="border">
+                    <h1>CERTIFICATES</h1>
+                </div>
+            </div>
+            
         </div>
     );
 };

@@ -1,6 +1,5 @@
 import "./product.css";
 import QuantityPicker from './quantityPicker';
-import { useState } from 'react';
 import DataContext from "../state/dataContext";
 import { useContext } from "react";
 
@@ -26,7 +25,7 @@ const Product
 
                 <div className="controls">
                     <QuantityPicker />
-                    <button onClick={handleAdd} className="btn btn-sm btn-info">Add</button>
+                    <button onClick={handleAdd} className="btn btn-outline-dark">Add</button>
                 </div>
             </div>
         );

@@ -9,6 +9,27 @@
     margin-top: 10px;
     text-align: center;
 }
+
+.about .container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+.about .container .border{
+    border-top: 50px;
+    border: 1px solid grey;
+    border-radius: 6px;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    background-color: #bba5cd;
+    text-align: center;
+    text-decoration: underline;
+    
+}
+.about .container .border.screen-reader-text:hover{
+    color:#0a0a5d
+}
 .about h5{
     text-align: center;
     margin-top: 480px;
