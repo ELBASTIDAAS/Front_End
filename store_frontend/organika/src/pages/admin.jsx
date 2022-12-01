@@ -46,7 +46,7 @@ const Admin = () => {
                         <input name="title" onBlur={productValChange} type="text" placeholder="Introducing the Title"/>
                     </div>
                     <div className="my-control">
-                        <label htmlFor=""><i class="bi bi-card-image"></i> Image</label>
+                        <label htmlFor=""><i class="bi bi-card-image"></i>  Image</label>
                         <input name="image" onBlur={productValChange} type="file" placeholder="Introducing the Image"/>
                     </div>
                     <div className="my-control">
