@@ -1,0 +1,8 @@
+.home{
+    min-height: calc(102vh - 120px);
+}
+
+.home h1{
+    text-align: center;
+    justify-content: center;
+}

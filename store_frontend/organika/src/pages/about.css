@@ -1,0 +1,15 @@
+.about{
+    margin-top: 10px;
+    background-color: #DACEE4;
+    min-height: calc(101vh - 120px);
+}
+
+.about h4{
+
+    margin-top: 10px;
+    text-align: center;
+}
+.about h5{
+    text-align: center;
+    margin-top: 480px;
+}
