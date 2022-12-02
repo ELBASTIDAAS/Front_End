@@ -2,10 +2,10 @@ import './cart.css'
 import CartProduct from '../components/cartProduct';
 import DataContext from '../state/dataContext';
 import { useContext } from 'react';
-import { useState } from 'react';
+
 
 const Cart = () => {
-    let [cardProduct, setCardProduct] = useState([]);
+    
 
     const cart = useContext(DataContext).cart;
 
