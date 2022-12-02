@@ -1,0 +1,9 @@
+.cart {
+    background-color: #DACEE4;
+    min-height: calc(102vh - 120px);
+}
+
+.cart h1,
+h4 {
+    text-align: center;
+}

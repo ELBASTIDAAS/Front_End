@@ -1,0 +1,20 @@
+.card-product {
+    border: 1px solid black;
+    margin-bottom: 20px;
+    display: flex;
+    background-color: #bba5cd;
+    align-items: center;
+}
+
+.card-product img {
+
+    width: 160px;
+}
+
+.card-product .description {
+    flex: 4;
+}
+
+.card-product label {
+    flex: 1;
+}

@@ -6,6 +6,15 @@ import { Link } from 'react-router-dom';
 function NavBar() {
     const cart = useContext(DataContext).cart;
 
+    const countProducts = () => {
+        let total = 0;
+
+        for (let i = 0; i < cart.length; i++) {
+            total += cart[i].quantity;
+        }
+        return total;
+    }
+
     return (
         <nav class="navbar navbar-expand-lg ">
             <div class="container-fluid">
@@ -22,7 +31,7 @@ function NavBar() {
                             <Link class="nav-link" to='/catalog'>CATALOG</Link>
                         </li>
                         <li class="nav-item">
-                            <Link class="nav-link" to='/about'>ABOUT</Link>
+                            <Link class="nav-link" to='/about'>ABOUT ME</Link>
                         </li>
                         <li class="nav-item">
                             <Link class="nav-link" to='/admin'>ADMIN</Link>
@@ -30,13 +39,13 @@ function NavBar() {
                     </ul>
                     <form class="d-flex" role="search">
                         <Link className="btn btn-outline-dark" to="/cart">
-                            <span class="badge text-bg-dark">{cart.length}</span>
+                            <span class="badge text-bg-dark">{countProducts()}</span>
                             &nbsp;&nbsp;
                             <i class="bi bi-cart2"></i>
                         </Link>
                     </form>
                 </div>
-                
+
             </div>
         </nav>
     )
