@@ -6,6 +6,12 @@ const CardProduct = (props) => {
         let total = props.data.price * props.data.quantity;
         return total.toFixed(2);
     };
+    const removeProduct = () => {
+        props.removeProductFromCart(props.data._id);
+    };
+
+    
+
     return (
         <div className="card-product">
             <img src={"/images/" + props.data.image} alt="" />
@@ -17,6 +23,7 @@ const CardProduct = (props) => {
             <label className="price">Price: ${props.data.price.toFixed(2)}</label>
             <label className="quantity">Quantity: {props.data.quantity}</label>
             <label className="total">Total: ${getTotal()}</label>
+            <button className="btn btn-dark"><i class="bi bi-trash"></i> Remove</button>
         </div>
     );
 }

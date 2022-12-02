@@ -7,7 +7,6 @@
 }
 
 .card-product img {
-
     width: 160px;
 }
 
@@ -17,4 +16,8 @@
 
 .card-product label {
     flex: 1;
+}
+
+.card-product button{
+    margin-right: 50px;
 }
