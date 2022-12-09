@@ -8,13 +8,15 @@ const Admin = () => {
     const [couponCode, setCouponCode] = useState({});
     const [allCoupons, setAllCoupons] = useState([]);
 
-    const saveProduct = () => {
+    const saveProduct = async () => {
         console.log(product);
-        //send the product to server
-        // call the saveProduct function on dataService
+
+        let fixedProd = { ...product };
+        fixedProd.price = parseFloat(fixedProd.price);
 
         let service = new DataService();
-        service.saveProduct(product);
+        let res = await service.saveProduct(fixedProd);
+        console.log(res);
 
         //add the products to the allProducts array
         let copy = [...allProducts];

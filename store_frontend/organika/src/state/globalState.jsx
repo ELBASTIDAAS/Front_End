@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const GlobalState = (props) => {
     let [cart, setCar] = useState([]);
-    let [user, setUser] = useState({ id: 42, name: "Miguel" });
+    let [user] = useState({ id: 42, name: "Miguel" });
 
     const addProductToCart = (product) => {
         //add the product to the cart
