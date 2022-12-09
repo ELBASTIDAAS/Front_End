@@ -1,12 +1,21 @@
 import './admin.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import DataService from '../services/dataService';
 const Admin = () => {
     const [product, setProducts] = useState({});
     const [allProducts, setAllProducts] = useState([]);
+
     const [couponCode, setCouponCode] = useState({});
     const [allCoupons, setAllCoupons] = useState([]);
+
     const saveProduct = () => {
         console.log(product);
+        //send the product to server
+        // call the saveProduct function on dataService
+
+        let service = new DataService();
+        service.saveProduct(product);
+
         //add the products to the allProducts array
         let copy = [...allProducts];
         copy.push(product);
@@ -35,6 +44,30 @@ const Admin = () => {
         copy[name] = value;
         setCouponCode(copy);
     }
+
+    /**
+     * create the fn
+     * create an instance of dataservice
+     * call the getCatalog method to retrive the list of products
+     * set the list of products to the allProducts state variable
+     */
+    const loadProductsFromServer = async () => {
+        let service = new DataService();
+        let prods = await service.getCatalog();
+        setAllProducts(prods);
+    }
+
+    const loadCouponsFromServer = async () => {
+        let service = new DataService();
+        let coupons = await service.getCoupons();
+        setAllCoupons(coupons);
+    }
+    // when the component is loded/displayed
+    useEffect(() => {
+        loadProductsFromServer();
+        loadCouponsFromServer();
+    }, []);
+
     return (
         <div className="admin">
             <h3 className="rarito">STORE ADMINISTRATION</h3>
@@ -43,19 +76,19 @@ const Admin = () => {
                     <h5>Save product</h5>
                     <div className="my-control">
                         <label htmlFor=""><i class="bi bi-code"></i> Title</label>
-                        <input name="title" onBlur={productValChange} type="text" placeholder="Introducing the Title"/>
+                        <input name="title" onBlur={productValChange} type="text" placeholder="Introducing the Title" />
                     </div>
                     <div className="my-control">
                         <label htmlFor=""><i class="bi bi-card-image"></i>  Image</label>
-                        <input name="image" onBlur={productValChange} type="file" placeholder="Introducing the Image"/>
+                        <input name="image" onBlur={productValChange} type="file" placeholder="Introducing the Image" />
                     </div>
                     <div className="my-control">
                         <label htmlFor="">Category</label>
-                        <input name="category" onBlur={productValChange} type="text" placeholder="Introducing the Category"/>
+                        <input name="category" onBlur={productValChange} type="text" placeholder="Introducing the Category" />
                     </div>
                     <div className="my-control">
                         <label htmlFor=""> <i class="bi bi-currency-dollar"></i> Price</label>
-                        <input name="price" onBlur={productValChange} type="number" placeholder="Introducing the Price"/>
+                        <input name="price" onBlur={productValChange} type="number" placeholder="Introducing the Price" />
                     </div>
                     <div className="center">
                         <button onClick={saveProduct} className="btn btn-dark">Save product</button>
@@ -74,7 +107,7 @@ const Admin = () => {
                     <h5>Register Coupon Codes</h5>
                     <div className="my-control">
                         <label htmlFor="" >Coupon</label>
-                        <input name="code" type="text" onBlur={couponValChange} placeholder="Introducing the Coupon"/>
+                        <input name="code" type="text" onBlur={couponValChange} placeholder="Introducing the Coupon" />
                     </div>
                     <div className="my-control">
                         <label htmlFor=""> Discount</label>
