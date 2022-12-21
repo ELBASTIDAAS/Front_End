@@ -7,9 +7,10 @@ import DataService from "../services/dataService";
 function Catalog() {
     let [products, setProducts] = useState([]);
 
-    const loadCatalog = () => {
+    // arrow function
+    const loadCatalog = async () => {
         let service = new DataService();
-        let prods = service.getCatalog();
+        let prods = await service.getCatalog();
         setProducts(prods);
     }
 
@@ -22,7 +23,7 @@ function Catalog() {
             <h1>Check our Amazing Catalog</h1>
             <h4>we have {products.lenght} products</h4>
             {products.map((prod) => (
-                <Product data ={prod} />
+                <Product data={prod} />
             ))}
         </div>
     );
